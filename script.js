@@ -25,5 +25,11 @@ for (let e in distanceObj) {
   nav_btn[e].addEventListener("click", () => {
     nav_btn_active.style.left = `${distanceObj[e].left}%`;
     nav_btn_active.style.width = `${distanceObj[e].width}%`;
+    nav_btn[e].classList.add("highlight");
+    for (let i in distanceObj) {
+      if (i != e) {
+        nav_btn[i].classList.remove("highlight");
+      }
+    }
   });
 }
