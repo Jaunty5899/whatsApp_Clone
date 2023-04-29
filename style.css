@@ -16,18 +16,64 @@ body {
 /* main classes/ID */
 .container {
   display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-dark);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
-/* NAVBAR */
+/* TitleBar */
+.main-nav-bar {
+  display: flex;
+  padding: 15px 10px 10px 15px;
+  justify-content: right;
+  align-items: center;
+  gap: 20px;
+}
+.main-nav-bar::before {
+  content: "WhatsApp";
+  font-weight: 500;
+  font-size: large;
+  color: var(--text-grey);
+  margin-right: auto;
+}
+.main-nav-btn {
+  width: 1.6em;
+  height: 1.6em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-nav-btn:nth-child(1) {
+  background-image: url(camera.svg);
+}
+.main-nav-btn:nth-child(2) {
+  background-image: url(search.svg);
+}
+.main-nav-btn:nth-child(3) {
+  background-image: url(menu.svg);
+}
+.main-nav-btn:nth-child(1):hover {
+  background-image: url(cameraG.svg);
+}
+.main-nav-btn:nth-child(2):hover {
+  background-image: url(searchG.svg);
+}
+.main-nav-btn:nth-child(3):hover {
+  background-image: url(menuG.svg);
+}
+
+/* NavBar */
 nav {
   display: flex;
-  width: 100%;
   position: relative;
 }
 .nav-btn {
-  background-color: var(--primary-dark);
   color: var(--text-grey);
   padding: 14px 0px;
   text-align: center;
@@ -51,7 +97,8 @@ nav {
   bottom: 0%;
   height: 8%;
   position: absolute;
-  transition: all 0.1s linear;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--accent-color) 0px 2px 8px;
 }
 
 /* #toggle classes */
