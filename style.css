@@ -12,8 +12,18 @@
 body {
   background-color: var(--secondary-dark);
 }
+
+/* main classes/ID */
+.container {
+  display: flex;
+}
+
+/* HEADER */
+
+/* NAVBAR */
 nav {
   display: flex;
+  width: 100%;
   position: relative;
 }
 .nav-btn {
@@ -21,20 +31,30 @@ nav {
   color: var(--text-grey);
   padding: 14px 0px;
   text-align: center;
-  flex-grow: 1;
+  flex-grow: 2;
+  justify-content: space-around;
   cursor: pointer;
+}
+.group-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  background-image: url(group.svg);
+  flex-grow: 1;
+}
+.group-icon.highlight {
+  background-image: url(groupG.svg);
 }
 .nav-btn-active {
   background-color: var(--accent-color);
-  border-radius: 0px 0px 2px 2px;
-  bottom: -9%;
-  left: 0%;
-  height: 10%;
+  border-radius: 2px 2px;
+  bottom: 0%;
+  height: 8%;
   position: absolute;
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s linear;
 }
 
+/* #toggle classes */
 .highlight {
   color: var(--accent-color);
 }
