@@ -86,7 +86,7 @@ nav {
   background-position: center;
   background-size: 70%;
   background-image: url(group.svg);
-  flex-grow: 1;
+  flex-grow: 1.1;
 }
 .group-icon.highlight {
   background-image: url(groupG.svg);
@@ -95,7 +95,7 @@ nav {
   background-color: var(--accent-color);
   border-radius: 2px 2px;
   bottom: 0%;
-  height: 8%;
+  height: 7%;
   position: absolute;
   transition: all 0.2s ease-in-out;
   box-shadow: var(--accent-color) 0px 2px 8px;
