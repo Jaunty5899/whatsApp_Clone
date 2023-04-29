@@ -87,6 +87,7 @@ nav {
   background-size: 70%;
   background-image: url(group.svg);
   flex-grow: 1.1;
+  max-width: 50px;
 }
 .group-icon.highlight {
   background-image: url(groupG.svg);
@@ -105,3 +106,5 @@ nav {
 .highlight {
   color: var(--accent-color);
 }
+
+/* media queries */
