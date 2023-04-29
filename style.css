@@ -84,7 +84,7 @@ nav {
 .group-icon {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 70%;
+  background-size: 65%;
   background-image: url(group.svg);
   flex-grow: 1.1;
   max-width: 50px;
