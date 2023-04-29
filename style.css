@@ -1,7 +1,7 @@
 :root {
   --accent-color: #1de9b6;
-  --primary-dark: #004d40;
-  --secondary-dark: #263238;
+  --primary-dark: #263238;
+  --secondary-dark: #212121;
   --text-grey: #bdbdbd;
 }
 * {
@@ -50,22 +50,22 @@ header {
   background-size: contain;
 }
 .main-nav-btn:nth-child(1) {
-  background-image: url(camera.svg);
+  background-image: url(images/camera.svg);
 }
 .main-nav-btn:nth-child(2) {
-  background-image: url(search.svg);
+  background-image: url(images/search.svg);
 }
 .main-nav-btn:nth-child(3) {
-  background-image: url(menu.svg);
+  background-image: url(images/menu.svg);
 }
 .main-nav-btn:nth-child(1):hover {
-  background-image: url(cameraG.svg);
+  background-image: url(images/cameraG.svg);
 }
 .main-nav-btn:nth-child(2):hover {
-  background-image: url(searchG.svg);
+  background-image: url(images/searchG.svg);
 }
 .main-nav-btn:nth-child(3):hover {
-  background-image: url(menuG.svg);
+  background-image: url(images/menuG.svg);
 }
 
 /* NavBar */
@@ -80,17 +80,18 @@ nav {
   flex-grow: 2;
   justify-content: space-around;
   cursor: pointer;
+  font-weight: 100;
 }
 .group-icon {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 65%;
-  background-image: url(group.svg);
+  background-image: url(images/group.svg);
   flex-grow: 1.1;
   max-width: 50px;
 }
 .group-icon.highlight {
-  background-image: url(groupG.svg);
+  background-image: url(images/groupG.svg);
 }
 .nav-btn-active {
   background-color: var(--accent-color);
