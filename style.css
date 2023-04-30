@@ -2,6 +2,7 @@
   --accent-color: #1de9b6;
   --primary-dark: #263238;
   --secondary-dark: #212121;
+  --menu-dark: #232b2b;
   --text-grey: #bdbdbd;
 }
 * {
@@ -67,6 +68,30 @@ header {
 .main-nav-btn.menu:hover {
   background-image: url(images/menuG.svg);
 }
+.main-nav-menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-weight: 100;
+  width: 45%;
+  background-color: var(--menu-dark);
+  color: var(--text-grey);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  overflow-x: hidden;
+  z-index: 1;
+}
+.main-nav-menu > li {
+  padding: 13px;
+}
+.main-nav-menu > li:hover {
+  background-color: var(--accent-color);
+  color: var(--menu-dark);
+  box-shadow: var(--accent-color) 0px 0px 8px;
+}
 
 /* NavBar */
 nav {
@@ -107,5 +132,7 @@ nav {
 .highlight {
   color: var(--accent-color);
 }
-
+.hide {
+  display: none;
+}
 /* media queries */

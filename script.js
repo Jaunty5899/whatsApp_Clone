@@ -1,5 +1,7 @@
 const nav_btn = document.querySelectorAll(".nav-btn");
 const nav_btn_active = document.querySelector(".nav-btn-active");
+const menu_btn = document.querySelector(".menu");
+const menu_for_chats = document.querySelector(".chats-sub-menu");
 let distanceObj = [];
 
 // pushing {left & width} into array at Load
@@ -30,3 +32,11 @@ for (let e in distanceObj) {
     }
   });
 }
+
+// adding listener to nav menu button for chats tab
+menu_btn.addEventListener("click", (e) => {
+  console.log("this isc;alled");
+  if (menu_for_chats.classList.contains("hide"))
+    menu_for_chats.classList.remove("hide");
+  else menu_for_chats.classList.add("hide");
+});
