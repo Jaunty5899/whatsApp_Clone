@@ -17,6 +17,7 @@ body {
 /* main classes/ID */
 .container {
   display: flex;
+  max-width: 376px;
   flex-direction: column;
 }
 
@@ -69,23 +70,24 @@ header {
   background-image: url(images/menuG.svg);
 }
 .main-nav-menu-container {
-  display: flex;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 50%;
-  z-index: 1;
 }
-.main-nav-menu {
-  position: absolute;
-  width: 100%;
-  list-style-type: none;
-  font-weight: 100;
+.modal {
+  width: 50%;
+  top: 0px;
+  left: auto;
+  border: none;
   background-color: var(--menu-dark);
-  color: var(--text-grey);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 2px;
-  overflow-x: hidden;
+}
+.modal::backdrop {
+  background-color: transparent;
+}
+.main-nav-menu {
+  list-style-type: none;
+  font-weight: 100;
+  color: var(--text-grey);
 }
 .main-nav-menu > li {
   padding: 13px;
@@ -135,7 +137,5 @@ nav {
 .highlight {
   color: var(--accent-color);
 }
-.hide {
-  display: none;
-}
+
 /* media queries */

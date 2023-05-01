@@ -27,21 +27,27 @@
           <div class="main-nav-btn search"></div>
           <div class="main-nav-btn menu"></div>
           <div class="main-nav-menu-container">
-            <ul class="main-nav-menu chats-sub-menu hide">
-              <li class="new-group">New group</li>
-              <li class="new-broadcast">New broadcast</li>
-              <li class="linked-devices">Linked devices</li>
-              <li class="starred-messages">Starred messages</li>
-              <li class="payments">Payments</li>
-              <li class="settings">Settings</li>
-            </ul>
-            <ul class="main-nav-menu status-sub-menu hide">
-              <li class="Status-privacy">Status Privacy</li>
-              <li class="settings">Settings</li>
-            </ul>
-            <ul class="main-nav-menu calls-sub-menu hide">
-              <li class="settings">Settings</li>
-            </ul>
+            <dialog class="modal chats">
+              <ul class="main-nav-menu chats-sub-menu">
+                <li class="new-group">New group</li>
+                <li class="new-broadcast">New broadcast</li>
+                <li class="linked-devices">Linked devices</li>
+                <li class="starred-messages">Starred messages</li>
+                <li class="payments">Payments</li>
+                <li class="settings">Settings</li>
+              </ul>
+            </dialog>
+            <dialog class="modal status">
+              <ul class="main-nav-menu status-sub-menu">
+                <li class="Status-privacy">Status Privacy</li>
+                <li class="settings">Settings</li>
+              </ul>
+            </dialog>
+            <dialog class="modal groups calls">
+              <ul class="main-nav-menu calls-sub-menu">
+                <li class="settings">Settings</li>
+              </ul>
+            </dialog>
           </div>
         </div>
         <nav>

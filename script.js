@@ -4,6 +4,7 @@ const menu_btn = document.querySelector(".menu");
 const chats_menu = document.querySelector(".chats-sub-menu");
 const status_menu = document.querySelector(".status-sub-menu");
 const calls_menu = document.querySelector(".calls-sub-menu");
+const modal = document.querySelectorAll(".modal");
 
 let distanceObj = [];
 let selected = nav_btn[1];
@@ -35,34 +36,45 @@ for (let e in distanceObj) {
       }
     }
     if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
+    console.log(selected);
   });
 }
 
 // toggle for chats,status,calls&groups sub-menu
 const menu_toggle = () => {
+  let current_tab;
   if (selected.classList.contains("chats")) {
-    if (chats_menu.classList.contains("hide"))
-      chats_menu.classList.remove("hide");
-    else chats_menu.classList.add("hide");
+    modal.forEach((e) => {
+      if (e.classList.contains("chats")) e.showModal();
+    });
   }
-
   if (selected.classList.contains("status")) {
-    if (status_menu.classList.contains("hide"))
-      status_menu.classList.remove("hide");
-    else status_menu.classList.add("hide");
+    modal.forEach((e) => {
+      if (e.classList.contains("status")) e.showModal();
+    });
   }
-
   if (
     selected.classList.contains("calls") ||
     selected.classList.contains("groups")
   ) {
-    if (calls_menu.classList.contains("hide"))
-      calls_menu.classList.remove("hide");
-    else calls_menu.classList.add("hide");
+    modal.forEach((e) => {
+      if (e.classList.contains("calls") || e.classList.contains("groups"))
+        e.showModal();
+    });
   }
 };
 
 // adding listener to nav menu button for chats tab
 menu_btn.addEventListener("click", () => {
   menu_toggle();
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".main-nav-menu") || e.target.closest(".main-nav-btn"))
+    return;
+  else {
+    modal.forEach((e) => {
+      e.close();
+    });
+  }
 });
