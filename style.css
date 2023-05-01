@@ -4,6 +4,7 @@
   --secondary-dark: #212121;
   --menu-dark: #232b2b;
   --text-grey: #bdbdbd;
+  --max: 376px;
 }
 * {
   font-family: "Roboto";
@@ -17,7 +18,7 @@ body {
 /* main classes/ID */
 .container {
   display: flex;
-  max-width: 376px;
+  max-width: var(--max);
   flex-direction: column;
 }
 
@@ -71,6 +72,7 @@ header {
 }
 .main-nav-menu-container {
   position: absolute;
+  max-width: var(-max);
 }
 .modal {
   width: 50%;
