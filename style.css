@@ -70,13 +70,15 @@ header {
 }
 .main-nav-menu-container {
   display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
   z-index: 1;
 }
 .main-nav-menu {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 45%;
+  width: 100%;
   list-style-type: none;
   font-weight: 100;
   background-color: var(--menu-dark);
