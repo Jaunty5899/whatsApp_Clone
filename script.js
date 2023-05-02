@@ -36,21 +36,19 @@ for (let e in distanceObj) {
       }
     }
     if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
-    console.log(selected);
   });
 }
 
 // toggle for chats,status,calls&groups sub-menu
 const menu_toggle = () => {
-  let current_tab;
   if (selected.classList.contains("chats")) {
     modal.forEach((e) => {
-      if (e.classList.contains("chats")) e.showModal();
+      if (e.classList.contains("chats")) e.classList.add("grow");
     });
   }
   if (selected.classList.contains("status")) {
     modal.forEach((e) => {
-      if (e.classList.contains("status")) e.showModal();
+      if (e.classList.contains("status")) e.classList.add("grow");
     });
   }
   if (
@@ -59,7 +57,7 @@ const menu_toggle = () => {
   ) {
     modal.forEach((e) => {
       if (e.classList.contains("calls") || e.classList.contains("groups"))
-        e.showModal();
+        e.classList.add("grow");
     });
   }
 };
@@ -70,11 +68,10 @@ menu_btn.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.closest(".main-nav-menu") || e.target.closest(".main-nav-btn"))
-    return;
+  if (e.target.closest(".modal") || e.target.closest(".main-nav-btn")) return;
   else {
     modal.forEach((e) => {
-      e.close();
+      e.classList.remove("grow");
     });
   }
 });
