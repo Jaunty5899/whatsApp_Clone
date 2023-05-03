@@ -13,7 +13,7 @@ let selected = nav_btn[1];
 nav_btn.forEach((e) => {
   distanceObj.push({
     left: e.offsetLeft,
-    width: e.offsetWidth,
+    width: e.offsetWidth - 1,
   });
 });
 
