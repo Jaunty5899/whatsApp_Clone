@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 376px;
+  /* max-width: 375.2px; */
 }
 
 /* HEADER */
@@ -70,6 +70,8 @@ header {
 .main-nav-btn.menu:hover {
   background-image: url(images/menuG.svg);
 }
+
+/* Menu Container */
 .main-nav-menu-container {
   display: flex;
   z-index: 100;
@@ -147,4 +149,5 @@ nav {
   scale: 1;
   opacity: 1;
 }
+
 /* media queries */
