@@ -7,6 +7,9 @@ const calls_menu = document.querySelector(".calls-sub-menu");
 const modal = document.querySelectorAll(".modal");
 const nav_input = document.querySelector(".search-container>.inputElement");
 const clear_btn = document.querySelector(".clear");
+const back_btn = document.querySelector(".back");
+const search_btn = document.querySelector(".search");
+const nav_search_container = document.querySelector(".nav-search-container");
 
 let distanceObj = [];
 let selected = nav_btn[1];
@@ -69,6 +72,16 @@ menu_btn.addEventListener("click", () => {
   menu_toggle();
 });
 
+// search button to open search element
+search_btn.addEventListener("click", () => {
+  nav_search_container.classList.add("slideDown");
+});
+
+// back button for close search element
+back_btn.addEventListener("click", () => {
+  nav_search_container.classList.remove("slideDown");
+});
+
 // clear button for nav's input
 clear_btn.addEventListener("click", () => {
   nav_input.value = "";
@@ -76,10 +89,16 @@ clear_btn.addEventListener("click", () => {
 
 // outside element detection
 document.addEventListener("click", (e) => {
-  if (e.target.closest(".modal") || e.target.closest(".main-nav-btn")) return;
+  if (
+    e.target.closest(".modal") ||
+    e.target.closest(".main-nav-btn") ||
+    e.target.closest(".nav-search-container")
+  )
+    return;
   else {
     modal.forEach((e) => {
       e.classList.remove("grow");
     });
+    nav_search_container.classList.remove("slideDown");
   }
 });
