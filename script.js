@@ -5,6 +5,8 @@ const chats_menu = document.querySelector(".chats-sub-menu");
 const status_menu = document.querySelector(".status-sub-menu");
 const calls_menu = document.querySelector(".calls-sub-menu");
 const modal = document.querySelectorAll(".modal");
+const nav_input = document.querySelector(".search-container>.inputElement");
+const clear_btn = document.querySelector(".clear");
 
 let distanceObj = [];
 let selected = nav_btn[1];
@@ -67,6 +69,12 @@ menu_btn.addEventListener("click", () => {
   menu_toggle();
 });
 
+// clear button for nav's input
+clear_btn.addEventListener("click", () => {
+  nav_input.value = "";
+});
+
+// outside element detection
 document.addEventListener("click", (e) => {
   if (e.target.closest(".modal") || e.target.closest(".main-nav-btn")) return;
   else {
