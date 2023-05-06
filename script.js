@@ -48,12 +48,12 @@ for (let e in distanceObj) {
 const menu_toggle = () => {
   if (selected.classList.contains("chats")) {
     modal.forEach((e) => {
-      if (e.classList.contains("chats")) e.classList.add("grow");
+      if (e.classList.contains("chats")) e.classList.add("clipPath");
     });
   }
   if (selected.classList.contains("status")) {
     modal.forEach((e) => {
-      if (e.classList.contains("status")) e.classList.add("grow");
+      if (e.classList.contains("status")) e.classList.add("clipPath");
     });
   }
   if (
@@ -62,7 +62,7 @@ const menu_toggle = () => {
   ) {
     modal.forEach((e) => {
       if (e.classList.contains("calls") || e.classList.contains("groups"))
-        e.classList.add("grow");
+        e.classList.add("clipPath");
     });
   }
 };
@@ -74,7 +74,7 @@ menu_btn.addEventListener("click", () => {
 
 // search button to open search element
 search_btn.addEventListener("click", () => {
-  nav_search_container.classList.add("slideDown");
+  nav_search_container.classList.add("clipPath");
 });
 
 // back button for close search element
@@ -97,8 +97,8 @@ document.addEventListener("click", (e) => {
     return;
   else {
     modal.forEach((e) => {
-      e.classList.remove("grow");
+      e.classList.remove("clipPath");
     });
-    nav_search_container.classList.remove("slideDown");
+    nav_search_container.classList.remove("clipPath");
   }
 });
