@@ -28,6 +28,7 @@ header {
   flex-direction: column;
   background-color: var(--primary-dark);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 5px;
 }
 
 /* TitleBar */
@@ -41,7 +42,7 @@ header {
 }
 .main-nav-bar::before {
   content: "WhatsApp";
-  font-weight: 500;
+  font-weight: 400;
   font-size: larger;
   color: var(--text-grey);
   margin-right: auto;
@@ -175,7 +176,7 @@ label.polls::before {
 }
 .main-nav-menu {
   list-style-type: none;
-  font-weight: 100;
+  font-weight: 400;
   color: var(--text-grey);
   user-select: none;
 }
@@ -203,7 +204,7 @@ nav {
   justify-content: space-around;
   height: 100%;
   cursor: pointer;
-  font-weight: 100;
+  font-weight: 400;
   user-select: none;
 }
 .group-icon {
@@ -218,6 +219,36 @@ nav {
   position: absolute;
   transition: all 0.2s ease-in-out;
   box-shadow: var(--accent-color) 0px 2px 8px;
+}
+
+/* chat card */
+.chat-card {
+  display: flex;
+  padding: 15px 15px;
+  gap: 15px;
+  color: var(--text-grey);
+  align-items: center;
+}
+.chat-card img {
+  border-radius: 50%;
+}
+.chat-info {
+  flex-grow: 1;
+}
+.card-upper {
+  display: flex;
+  justify-content: space-between;
+}
+.sender-info {
+  font-weight: 600;
+}
+.last-msg-time {
+  font-weight: 400;
+  font-size: smaller;
+  opacity: 0.8;
+}
+.last-msg {
+  margin-top: 5px;
 }
 
 /* #toggle classes */
