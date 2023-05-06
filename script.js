@@ -79,7 +79,7 @@ search_btn.addEventListener("click", () => {
 
 // back button for close search element
 back_btn.addEventListener("click", () => {
-  nav_search_container.classList.remove("slideDown");
+  nav_search_container.classList.remove("clipPath");
 });
 
 // clear button for nav's input
