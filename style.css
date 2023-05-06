@@ -111,17 +111,22 @@ header {
   gap: 7px;
   flex-wrap: wrap;
 }
-.tag {
+input[type="radio"] {
+  display: none;
+}
+label {
   display: flex;
-  padding: 7px;
-  border: 2px solid var(--accent-color);
+  padding: 10px;
   border-radius: 20px;
   color: var(--accent-color);
   box-sizing: border-box;
   margin-bottom: 6px;
-  user-select: none;
+  transition: all 0.3s linear;
 }
-.tag::before {
+input[type="radio"]:checked + label {
+  box-shadow: #232b2b 3px 3px 6px 0px inset, #212121bd -3px -3px 6px 1px inset;
+}
+label::before {
   content: "";
   display: flex;
   width: 10px;
@@ -129,28 +134,28 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.tag.unread::before {
+label.unread::before {
   background-image: url(images/unread.svg);
 }
-.tag.photos::before {
+label.photos::before {
   background-image: url(images/photos.svg);
 }
-.tag.videos::before {
+label.videos::before {
   background-image: url(images/videos.svg);
 }
-.tag.links::before {
+label.links::before {
   background-image: url(images/links.svg);
 }
-.tag.gifs::before {
+label.gifs::before {
   background-image: url(images/gifs.svg);
 }
-.tag.audios::before {
+label.audios::before {
   background-image: url(images/audios.svg);
 }
-.tag.documents::before {
+label.documents::before {
   background-image: url(images/documents.svg);
 }
-.tag.polls::before {
+label.polls::before {
   background-image: url(images/polls.svg);
 }
 
