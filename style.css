@@ -33,11 +33,11 @@ header {
 /* TitleBar */
 .main-nav-bar {
   display: flex;
-  padding: 15px 5px 10px 15px;
+  padding: 15px 10px 10px 15px;
   justify-content: right;
   align-items: center;
   height: 4vh;
-  transition: height 3s linear;
+  gap: 15px;
 }
 .main-nav-bar::before {
   content: "WhatsApp";
@@ -46,31 +46,27 @@ header {
   color: var(--text-grey);
   margin-right: auto;
 }
-.main-nav-btn {
-  width: 1.6em;
-  height: 1.6em;
-  padding-left: 15px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 .main-nav-btn.camera {
-  background-image: url(images/camera.svg);
+  display: flex;
+  align-items: center;
 }
 .main-nav-btn.search {
-  background-image: url(images/search.svg);
+  display: flex;
+  align-items: center;
 }
 .main-nav-btn.menu {
-  background-image: url(images/menu.svg);
+  display: flex;
+  align-items: center;
 }
-.main-nav-btn.camera:hover {
-  background-image: url(images/cameraG.svg);
+#main-nav-bar-svg,
+#nav-svg {
+  fill: var(--text-grey);
+  width: 25px;
+  transition: fill 0.4s linear;
 }
-.main-nav-btn.search:hover {
-  background-image: url(images/searchG.svg);
-}
-.main-nav-btn.menu:hover {
-  background-image: url(images/menuG.svg);
+#main-nav-bar-svg:hover,
+.group-icon.highlight #nav-svg {
+  fill: var(--accent-color);
 }
 
 /* Search Container */
@@ -87,8 +83,9 @@ header {
 }
 .search-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 13px 0px 10px 0px;
+  padding: 5px 15px 0px 15px;
 }
 .inputElement {
   flex-grow: 1;
@@ -101,14 +98,11 @@ header {
 }
 .main-nav-btn.back {
   padding: 0;
-  padding-right: 25px;
-  background-image: url(images/arrowBack.svg);
+  padding-right: 20px;
 }
 .main-nav-btn.clear {
   padding: 0;
   padding-left: 15px;
-  padding-right: 10px;
-  background-image: url(images/close.svg);
 }
 .tags-container {
   display: flex;
@@ -181,7 +175,7 @@ header {
   user-select: none;
 }
 .main-nav-menu > li {
-  padding: 13px;
+  padding: 15px;
   transition: background 0.3s linear, box-shadow 0.4s linear;
 }
 .main-nav-menu > li:hover {
@@ -193,6 +187,7 @@ header {
 /* NavBar */
 nav {
   display: flex;
+  align-items: center;
   position: relative;
 }
 .nav-btn {
@@ -201,20 +196,14 @@ nav {
   text-align: center;
   flex-grow: 2;
   justify-content: space-around;
+  height: 100%;
   cursor: pointer;
   font-weight: 100;
   user-select: none;
 }
 .group-icon {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 65%;
-  background-image: url(images/group.svg);
-  flex-grow: 1.1;
-  max-width: 50px;
-}
-.group-icon.highlight {
-  background-image: url(images/groupG.svg);
+  padding: 0;
+  flex-grow: 0.2;
 }
 .nav-btn-active {
   background-color: var(--accent-color);
@@ -233,4 +222,5 @@ nav {
 .clipPath {
   clip-path: circle(142% at 100% 0%);
 }
+
 /* media queries */

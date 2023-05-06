@@ -9,14 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="images/search.svg" />
-    <link rel="preload" as="image" href="images/searchG.svg" />
-    <link rel="preload" as="image" href="images/menu.svg" />
-    <link rel="preload" as="image" href="images/menuG.svg" />
-    <link rel="preload" as="image" href="images/camera.svg" />
-    <link rel="preload" as="image" href="images/cameraG.svg" />
-    <link rel="preload" as="image" href="images/group.svg" />
-    <link rel="preload" as="image" href="images/groupG.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -24,9 +16,33 @@
       <header>
         <div class="nav-search-container">
           <div class="search-container">
-            <div class="main-nav-btn back"></div>
+            <div class="main-nav-btn back">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="main-nav-bar-svg"
+                height="48"
+                viewBox="0 96 960 960"
+                width="48"
+              >
+                <path
+                  d="M447 875 169 597q-5-5-7-10t-2-11q0-6 2-11t7-10l279-279q8-8 20-8t21 9q9 9 9 21t-9 21L262 546h496q13 0 21.5 8.5T788 576q0 13-8.5 21.5T758 606H262l228 228q8 8 8 20t-9 21q-9 9-21 9t-21-9Z"
+                />
+              </svg>
+            </div>
             <input class="inputElement" type="text" placeholder="Search..." />
-            <div class="main-nav-btn clear"></div>
+            <div class="main-nav-btn clear">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="main-nav-bar-svg"
+                height="48"
+                viewBox="0 96 960 960"
+                width="48"
+              >
+                <path
+                  d="M480 618 270 828q-9 9-21 9t-21-9q-9-9-9-21t9-21l210-210-210-210q-9-9-9-21t9-21q9-9 21-9t21 9l210 210 210-210q9-9 21-9t21 9q9 9 9 21t-9 21L522 576l210 210q9 9 9 21t-9 21q-9 9-21 9t-21-9L480 618Z"
+                />
+              </svg>
+            </div>
           </div>
           <div class="tags-container">
             <div class="tag unread">Unread</div>
@@ -63,13 +79,61 @@
           </div>
         </div>
         <div class="main-nav-bar">
-          <div class="main-nav-btn camera"></div>
-          <div class="main-nav-btn search"></div>
-          <div class="main-nav-btn menu"></div>
+          <div class="main-nav-btn camera">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="main-nav-bar-svg"
+              height="48"
+              viewBox="0 96 960 960"
+              width="48"
+            >
+              <path
+                d="M479.5 790q72.5 0 121.5-49t49-121.5q0-72.5-49-121T479.5 450q-72.5 0-121 48.5t-48.5 121q0 72.5 48.5 121.5t121 49Zm0-60q-47.5 0-78.5-31.5t-31-79q0-47.5 31-78.5t78.5-31q47.5 0 79 31t31.5 78.5q0 47.5-31.5 79t-79 31.5ZM140 936q-24 0-42-18t-18-42V363q0-23 18-41.5t42-18.5h147l73-87h240l73 87h147q23 0 41.5 18.5T880 363v513q0 24-18.5 42T820 936H140Zm680-60V363H645l-73-87H388l-73 87H140v513h680ZM480 620Z"
+              />
+            </svg>
+          </div>
+          <div class="main-nav-btn search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="main-nav-bar-svg"
+              height="48"
+              viewBox="0 96 960 960"
+              width="48"
+            >
+              <path
+                d="M774 913 533 672q-30 26-69.959 40.5T378 727q-108.162 0-183.081-75Q120 577 120 471t75-181q75-75 181.5-75t181 75Q632 365 632 471.15 632 514 618 554q-14 40-42 75l243 241q9 8.442 9 20.721t-9.913 22.192Q809 922 795.778 922q-13.222 0-21.778-9ZM377 667q81.25 0 138.125-57.5T572 471q0-81-56.875-138.5T377 275q-82.083 0-139.542 57.5Q180 390 180 471t57.458 138.5Q294.917 667 377 667Z"
+              />
+            </svg>
+          </div>
+          <div class="main-nav-btn menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="main-nav-bar-svg"
+              height="48"
+              viewBox="0 96 960 960"
+              width="48"
+            >
+              <path
+                d="M480.527 924Q456 924 439.5 907.191 423 890.383 423 866.779q0-23.079 16.38-40.929Q455.759 808 479.473 808 504 808 520.5 825.801t16.5 41Q537 890 520.67 907q-16.329 17-40.143 17Zm0-291Q456 633 439.5 616.62 423 600.241 423 576.527 423 552 439.38 535.5q16.379-16.5 40.093-16.5Q504 519 520.5 535.33q16.5 16.329 16.5 40.143Q537 600 520.67 616.5 504.341 633 480.527 633Zm0-289Q456 344 439.5 326.739t-16.5-41.5Q423 261 439.38 244q16.379-17 40.093-17Q504 227 520.5 244.078q16.5 17.077 16.5 41.108 0 24.443-16.33 41.629Q504.341 344 480.527 344Z"
+              />
+            </svg>
+          </div>
         </div>
         <nav>
           <div class="nav-btn-active"></div>
-          <div class="nav-btn groups group-icon"></div>
+          <div class="nav-btn groups group-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="nav-svg"
+              height="40"
+              viewBox="0 96 960 960"
+              width="40"
+            >
+              <path
+                d="M-13.333 829.333v-69.955q0-46.422 46.333-74.9Q79.333 656 153.584 656h10.583q4.5 0 10.166.435-12.333 21.899-18.453 45.4-6.12 23.502-6.12 49.047v78.451H-13.333Zm240 0V751q0-35 18-64.333 18-29.334 52.333-50.667 34.333-21.333 80.862-32.333 46.53-11 101.941-11 56.477 0 102.506 11 46.03 11 80.691 32.333 34.333 21.333 52.333 50.667 18 29.333 18 64.333v78.333H226.667Zm583.333 0v-78.619q0-26.324-6-49.787-6-23.463-17.333-44.442 5.666-.485 10.376-.485h9.624q75.533 0 121.1 28.322 45.566 28.321 45.566 75.345v69.666H810ZM153.216 626.001q-33.549 0-57.383-24.016Q72 577.97 72 544.247q0-34.246 23.878-57.913 23.878-23.666 57.408-23.666 34.047 0 58.047 23.64t24 58.005q0 33.354-23.776 57.521t-58.341 24.167Zm653.333 0q-33.549 0-57.382-24.016-23.833-24.015-23.833-57.738 0-34.246 23.878-57.913 23.877-23.666 57.408-23.666 34.047 0 58.047 23.64t24 58.005q0 33.354-23.776 57.521t-58.342 24.167Zm-326.222-62.334q-55.691 0-94.676-38.985-38.984-38.984-38.984-94.676 0-56.006 38.984-94.506 38.985-38.5 94.676-38.5 56.006 0 94.506 38.5t38.5 94.506q0 55.692-38.5 94.676-38.5 38.985-94.506 38.985Z"
+              />
+            </svg>
+          </div>
           <div class="nav-btn chats highlight">Chats</div>
           <div class="nav-btn status">Status</div>
           <div class="nav-btn calls">Calls</div>
