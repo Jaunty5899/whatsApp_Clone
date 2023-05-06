@@ -121,7 +121,7 @@ label {
   color: var(--accent-color);
   box-sizing: border-box;
   margin-bottom: 6px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 input[type="radio"]:checked + label {
   box-shadow: #232b2b 3px 3px 6px 0px inset, #212121bd -3px -3px 6px 1px inset;
@@ -208,7 +208,7 @@ nav {
 }
 .group-icon {
   padding: 0;
-  flex-grow: 0.2;
+  flex-grow: 0.4;
 }
 .nav-btn-active {
   background-color: var(--accent-color);
