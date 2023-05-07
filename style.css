@@ -19,7 +19,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100vh;
   /* max-width: 375.2px; */
 }
 
@@ -198,10 +199,12 @@ nav {
   position: relative;
 }
 .nav-btn {
+  display: flex;
   color: var(--text-grey);
   padding: 14px 0px;
   text-align: center;
   flex-grow: 2;
+  align-items: center;
   justify-content: space-around;
   height: 100%;
   cursor: pointer;
@@ -211,6 +214,9 @@ nav {
 .group-icon {
   padding: 0;
   flex-grow: 0.4;
+}
+.group-icon > #nav-svg {
+  width: 23px;
 }
 .nav-btn-active {
   background-color: var(--accent-color);
@@ -229,18 +235,6 @@ nav {
 .section {
   flex-shrink: 0;
   width: 100%;
-}
-.section.groups {
-  scroll-snap-align: start;
-}
-.section.chats {
-  scroll-snap-align: start;
-}
-.section.status {
-  scroll-snap-align: start;
-}
-.section.calls {
-  scroll-snap-align: start;
 }
 
 /* chat card */
