@@ -10,6 +10,7 @@ const clear_btn = document.querySelector(".clear");
 const back_btn = document.querySelector(".back");
 const search_btn = document.querySelector(".search");
 const nav_search_container = document.querySelector(".nav-search-container");
+const sections = document.querySelector(".section-container");
 
 let distanceObj = [];
 let selected = nav_btn[1];
@@ -26,6 +27,7 @@ nav_btn.forEach((e) => {
 const startSetter = () => {
   nav_btn_active.style.width = `${distanceObj[1].width}px`;
   nav_btn_active.style.left = `${distanceObj[1].left}px`;
+  sections.style.translate = `-${100 * 1}% ${0}%`;
 };
 startSetter();
 
@@ -40,6 +42,7 @@ for (let e in distanceObj) {
         nav_btn[i].classList.remove("highlight");
       }
     }
+    sections.style.translate = `-${100 * e}% ${0}%`;
     if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
   });
 }

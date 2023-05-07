@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
   /* max-width: 375.2px; */
 }
 
@@ -221,6 +222,27 @@ nav {
   box-shadow: var(--accent-color) 0px 2px 8px;
 }
 
+.section-container {
+  display: flex;
+  transition: translate 0.2s ease-in-out;
+}
+.section {
+  flex-shrink: 0;
+  width: 100%;
+}
+.section.groups {
+  scroll-snap-align: start;
+}
+.section.chats {
+  scroll-snap-align: start;
+}
+.section.status {
+  scroll-snap-align: start;
+}
+.section.calls {
+  scroll-snap-align: start;
+}
+
 /* chat card */
 .chat-card {
   display: flex;
@@ -258,5 +280,4 @@ nav {
 .clipPath {
   clip-path: circle(142% at 100% 0%);
 }
-
 /* media queries */
