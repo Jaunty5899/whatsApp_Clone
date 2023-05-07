@@ -11,6 +11,7 @@ const back_btn = document.querySelector(".back");
 const search_btn = document.querySelector(".search");
 const nav_search_container = document.querySelector(".nav-search-container");
 const sections = document.querySelector(".section-container");
+const title_height_inc = document.querySelector(".main-nav-bar");
 
 let distanceObj = [];
 let selected = nav_btn[1];
@@ -78,11 +79,13 @@ menu_btn.addEventListener("click", () => {
 // search button to open search element
 search_btn.addEventListener("click", () => {
   nav_search_container.classList.add("clipPath");
+  title_height_inc.classList.add("title-len");
 });
 
 // back button for close search element
 back_btn.addEventListener("click", () => {
   nav_search_container.classList.remove("clipPath");
+  title_height_inc.classList.remove("title-len");
 });
 
 // clear button for nav's input
@@ -103,5 +106,6 @@ document.addEventListener("click", (e) => {
       e.classList.remove("clipPath");
     });
     nav_search_container.classList.remove("clipPath");
+    title_height_inc.classList.remove("title-len");
   }
 });
