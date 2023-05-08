@@ -100,14 +100,23 @@ clear_btn.addEventListener("click", () => {
 });
 
 section_container.addEventListener("scroll", () => {
-  for (let e in distanceObj) {
+  // for (let e in distanceObj) {
+  //   if (
+  //     section_container.scrollLeft == distanceObj[e].scrollLeft ||
+  //     section_container.scrollLeft == 1126
+  //   ) {
+  //     active_state(e);
+  //   }
+  // }
+  nav_btn_active.style.left = section_container.scrollLeft / 7 + "px";
+  for (let i in distanceObj) {
     if (
-      section_container.scrollLeft == distanceObj[e].scrollLeft ||
-      section_container.scrollLeft == 1126
-    ) {
-      active_state(e);
-    }
+      distanceObj[i].scrollLeft == section_container.scrollLeft ||
+      distanceObj[i].scrollLeft + 1 == section_container.scrollLeft
+    )
+      active_state(i);
   }
+  // console.log(section_container.scrollLeft);
 });
 
 // outside element detection
