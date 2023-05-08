@@ -38,13 +38,13 @@ for (let e in distanceObj) {
     nav_btn_active.style.left = `${distanceObj[e].left}px`;
     nav_btn_active.style.width = `${distanceObj[e].width}px`;
     nav_btn[e].classList.add("highlight");
-    section_container.scrollLeft = 375 * e;
     for (let i in distanceObj) {
       if (i != e) {
         nav_btn[i].classList.remove("highlight");
       }
     }
     if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
+    section_container.scrollLeft = 375 * e;
   });
 }
 
