@@ -226,7 +226,7 @@ nav {
   bottom: 0%;
   height: 7%;
   position: absolute;
-  transition: all 0.1s linear;
+  transition: all 0.25s linear;
   box-shadow: var(--accent-color) 0px 2px 8px;
 }
 
