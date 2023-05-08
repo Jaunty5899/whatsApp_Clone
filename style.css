@@ -1,9 +1,9 @@
 :root {
-  --accent-color: #1de9b6;
-  --primary-dark: #263238;
-  --secondary-dark: #212121;
-  --menu-dark: #232b2b;
-  --text-grey: #bdbdbd;
+  --accent-color: #ff4081;
+  --primary-dark: #181818;
+  --secondary-dark: #111111;
+  --menu-dark: #181818;
+  --text-grey: #fce4ec;
 }
 * {
   font-family: "Roboto";
@@ -212,7 +212,7 @@ nav {
 }
 .group-icon {
   padding: 0;
-  flex-grow: 0.4;
+  flex-grow: 0.3;
 }
 .group-icon > #nav-svg {
   width: 23px;
@@ -234,7 +234,7 @@ nav {
   height: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
 }
 .section {
   scroll-snap-align: start;
@@ -261,7 +261,8 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-.sender-info {
+.sender-name {
+  color: var(--accent-color);
   font-weight: 600;
 }
 .last-msg-time {
