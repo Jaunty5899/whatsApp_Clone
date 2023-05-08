@@ -210,6 +210,9 @@ nav {
   font-weight: 400;
   user-select: none;
 }
+.nav-btn.highlight {
+  text-shadow: var(--accent-color) 0px 2px 8px;
+}
 .group-icon {
   padding: 0;
   flex-grow: 0.3;
@@ -223,7 +226,7 @@ nav {
   bottom: 0%;
   height: 7%;
   position: absolute;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s linear;
   box-shadow: var(--accent-color) 0px 2px 8px;
 }
 
@@ -237,7 +240,7 @@ nav {
   scrollbar-width: none;
 }
 .section {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   scroll-snap-stop: always;
   flex-shrink: 0;
   width: 100%;
