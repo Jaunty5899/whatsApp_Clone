@@ -229,11 +229,11 @@ nav {
 
 /* section */
 .section-container {
+  scroll-behavior: smooth;
   display: flex;
   height: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  transition: translate 0.2s ease-in-out;
 }
 .section {
   scroll-snap-align: start;

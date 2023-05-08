@@ -10,9 +10,8 @@ const clear_btn = document.querySelector(".clear");
 const back_btn = document.querySelector(".back");
 const search_btn = document.querySelector(".search");
 const nav_search_container = document.querySelector(".nav-search-container");
-const sections = document.querySelector(".section-container");
+const section_container = document.querySelector(".section-container");
 const title_height_inc = document.querySelector(".main-nav-bar");
-const all_sections = document.querySelectorAll("section");
 
 let distanceObj = [];
 let selected = nav_btn[1];
@@ -29,6 +28,7 @@ nav_btn.forEach((e) => {
 const startSetter = () => {
   nav_btn_active.style.width = `${distanceObj[1].width}px`;
   nav_btn_active.style.left = `${distanceObj[1].left}px`;
+  section_container.scrollLeft = 375;
 };
 startSetter();
 
@@ -38,12 +38,12 @@ for (let e in distanceObj) {
     nav_btn_active.style.left = `${distanceObj[e].left}px`;
     nav_btn_active.style.width = `${distanceObj[e].width}px`;
     nav_btn[e].classList.add("highlight");
+    section_container.scrollLeft = 375 * e;
     for (let i in distanceObj) {
       if (i != e) {
         nav_btn[i].classList.remove("highlight");
       }
     }
-    console.log(all_sections[e]);
     if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
   });
 }
