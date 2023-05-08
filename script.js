@@ -15,36 +15,42 @@ const title_height_inc = document.querySelector(".main-nav-bar");
 
 let distanceObj = [];
 let selected = nav_btn[1];
+let S_left = 0;
 
 // pushing {left & width} into array at Load
 nav_btn.forEach((e) => {
   distanceObj.push({
     left: e.offsetLeft,
     width: e.offsetWidth,
+    scrollLeft: section_container.offsetWidth * S_left,
   });
+  S_left++;
 });
-
 // setting starting width for highlighter
 const startSetter = () => {
   nav_btn_active.style.width = `${distanceObj[1].width}px`;
   nav_btn_active.style.left = `${distanceObj[1].left}px`;
-  section_container.scrollLeft = 375;
+  section_container.scrollLeft = distanceObj[1].scrollLeft;
 };
 startSetter();
+
+const active_state = (e) => {
+  nav_btn_active.style.left = `${distanceObj[e].left}px`;
+  nav_btn_active.style.width = `${distanceObj[e].width}px`;
+  section_container.scrollLeft = distanceObj[e].scrollLeft;
+  nav_btn[e].classList.add("highlight");
+  for (let i in distanceObj) {
+    if (i != e) {
+      nav_btn[i].classList.remove("highlight");
+    }
+  }
+  if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
+};
 
 // adding listeners to nav buttons on load
 for (let e in distanceObj) {
   nav_btn[e].addEventListener("click", () => {
-    nav_btn_active.style.left = `${distanceObj[e].left}px`;
-    nav_btn_active.style.width = `${distanceObj[e].width}px`;
-    nav_btn[e].classList.add("highlight");
-    for (let i in distanceObj) {
-      if (i != e) {
-        nav_btn[i].classList.remove("highlight");
-      }
-    }
-    if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
-    section_container.scrollLeft = 375 * e;
+    active_state(e);
   });
 }
 
@@ -91,6 +97,17 @@ back_btn.addEventListener("click", () => {
 // clear button for nav's input
 clear_btn.addEventListener("click", () => {
   nav_input.value = "";
+});
+
+section_container.addEventListener("scroll", () => {
+  for (let e in distanceObj) {
+    if (
+      section_container.scrollLeft == distanceObj[e].scrollLeft ||
+      section_container.scrollLeft == 1126
+    ) {
+      active_state(e);
+    }
+  }
 });
 
 // outside element detection
