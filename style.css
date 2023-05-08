@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 667px;
+  height: 100vh;
 }
 
 /* HEADER */
@@ -280,6 +280,6 @@ nav {
   clip-path: circle(142% at 100% 0%);
 }
 .title-height {
-  height: 120px;
+  height: 125px;
 }
 /* media queries */
