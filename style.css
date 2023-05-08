@@ -283,3 +283,8 @@ nav {
   height: 125px;
 }
 /* media queries */
+@media (width>799px) {
+  .title-height {
+    height: 2.6vh;
+  }
+}
