@@ -12,6 +12,7 @@ const search_btn = document.querySelector(".search");
 const nav_search_container = document.querySelector(".nav-search-container");
 const sections = document.querySelector(".section-container");
 const title_height_inc = document.querySelector(".main-nav-bar");
+const all_sections = document.querySelectorAll("section");
 
 let distanceObj = [];
 let selected = nav_btn[1];
@@ -28,7 +29,6 @@ nav_btn.forEach((e) => {
 const startSetter = () => {
   nav_btn_active.style.width = `${distanceObj[1].width}px`;
   nav_btn_active.style.left = `${distanceObj[1].left}px`;
-  sections.style.translate = `-${100 * 1}% ${0}%`;
 };
 startSetter();
 
@@ -43,7 +43,7 @@ for (let e in distanceObj) {
         nav_btn[i].classList.remove("highlight");
       }
     }
-    sections.style.translate = `-${100 * e}% ${0}%`;
+    console.log(all_sections[e]);
     if (nav_btn[e].classList.contains("highlight")) selected = nav_btn[e];
   });
 }
@@ -79,13 +79,13 @@ menu_btn.addEventListener("click", () => {
 // search button to open search element
 search_btn.addEventListener("click", () => {
   nav_search_container.classList.add("clipPath");
-  title_height_inc.classList.add("title-len");
+  title_height_inc.classList.add("title-height");
 });
 
 // back button for close search element
 back_btn.addEventListener("click", () => {
   nav_search_container.classList.remove("clipPath");
-  title_height_inc.classList.remove("title-len");
+  title_height_inc.classList.remove("title-height");
 });
 
 // clear button for nav's input
@@ -106,6 +106,6 @@ document.addEventListener("click", (e) => {
       e.classList.remove("clipPath");
     });
     nav_search_container.classList.remove("clipPath");
-    title_height_inc.classList.remove("title-len");
+    title_height_inc.classList.remove("title-height");
   }
 });
