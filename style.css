@@ -234,10 +234,10 @@ nav {
   height: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  /* scrollbar-width: none; */
+  scrollbar-width: none;
 }
 .section {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   scroll-snap-stop: always;
   flex-shrink: 0;
   width: 100%;
