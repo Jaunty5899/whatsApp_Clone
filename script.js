@@ -108,7 +108,8 @@ section_container.addEventListener("scroll", () => {
   //     active_state(e);
   //   }
   // }
-  nav_btn_active.style.left = section_container.scrollLeft / 4 + "px";
+  nav_btn_active.style.left =
+    (section_container.scrollLeft * 23.62) / 100 + "px";
   for (let i in distanceObj) {
     if (
       distanceObj[i].scrollLeft == section_container.scrollLeft ||

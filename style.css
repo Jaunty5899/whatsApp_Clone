@@ -240,7 +240,7 @@ nav {
   scrollbar-width: none;
 }
 .section {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   scroll-snap-stop: always;
   flex-shrink: 0;
   width: 100%;
